@@ -1,0 +1,60 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #dde1e7;
+}
+
+.keyboard {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-box-shadow: -3px -3px 7px #ffffff73, 2px 2px 5px rgba(94, 104, 121, 0.288);
+          box-shadow: -3px -3px 7px #ffffff73, 2px 2px 5px rgba(94, 104, 121, 0.288);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 10px;
+  padding: 25px;
+}
+
+.keyboard__row {
+  white-space: nowrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.keyboard__row input {
+  height: 50px;
+  min-width: 50px;
+  padding: 10px;
+  outline: none;
+  border: none;
+  font-size: 20px;
+  color: #808080;
+  text-transform: uppercase;
+  margin: 10px;
+  border-radius: 5px;
+  -webkit-box-shadow: -3px -3px 7px #ffffff73, 2px 2px 5px rgba(94, 104, 121, 0.288);
+          box-shadow: -3px -3px 7px #ffffff73, 2px 2px 5px rgba(94, 104, 121, 0.288);
+  background-color: #dde1e7;
+}
+
+.keyboard__row input:focus {
+  -webkit-box-shadow: inset -3px -3px 7px #ffffff73, inset 2px 2px 5px rgba(94, 104, 121, 0.288);
+          box-shadow: inset -3px -3px 7px #ffffff73, inset 2px 2px 5px rgba(94, 104, 121, 0.288);
+  font-size: 19px;
+  color: #3498db;
+}
+
+.keyboard__row input[value="space"] {
+  width: 60%;
+}
+/*# sourceMappingURL=style.css.map */
