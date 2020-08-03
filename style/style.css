@@ -9,14 +9,18 @@ body {
   background-color: #dde1e7;
 }
 
-.keyboard {
+.wrapper {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-box-shadow: -3px -3px 7px #ffffff73, 2px 2px 5px rgba(94, 104, 121, 0.288);
-          box-shadow: -3px -3px 7px #ffffff73, 2px 2px 5px rgba(94, 104, 121, 0.288);
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.keyboard {
+  -webkit-box-shadow: -3px -3px 7px #ffffff73, 2px 2px 5px rgba(94, 104, 121, 0.288);
+          box-shadow: -3px -3px 7px #ffffff73, 2px 2px 5px rgba(94, 104, 121, 0.288);
   border-radius: 10px;
   padding: 25px;
 }
@@ -56,5 +60,18 @@ body {
 
 .keyboard__row input[value="space"] {
   width: 60%;
+}
+
+.correct {
+  color: green;
+}
+
+.incorrect {
+  color: red;
+  text-decoration: underline;
+}
+
+.userPositionIndicate {
+  text-decoration: underline;
 }
 /*# sourceMappingURL=style.css.map */

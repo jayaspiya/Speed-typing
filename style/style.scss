@@ -9,13 +9,17 @@
 body {
   background-color: #dde1e7;
 }
-.keyboard {
-  //   width: 60%;
+.wrapper {
   position: absolute;
   top: 50%;
   left: 50%;
-  @include box-shadow();
   transform: translate(-50%, -50%);
+  text-align: center;
+}
+.keyboard {
+  //   width: 60%;
+
+  @include box-shadow();
   border-radius: 10px;
   padding: 25px;
   &__row {
@@ -46,4 +50,15 @@ body {
       width: 60%;
     }
   }
+}
+.correct {
+  color: green;
+}
+.incorrect {
+  color: red;
+  text-decoration: underline;
+}
+
+.userPositionIndicate {
+  text-decoration: underline;
 }
