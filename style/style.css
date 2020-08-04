@@ -7,6 +7,7 @@
 
 body {
   background-color: #dde1e7;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 .wrapper {
@@ -18,11 +19,17 @@ body {
   text-align: center;
 }
 
+.paragraph {
+  font-size: 18px;
+  margin: 10px 50px;
+  color: #808080;
+}
+
 .keyboard {
   -webkit-box-shadow: -3px -3px 7px #ffffff73, 2px 2px 5px rgba(94, 104, 121, 0.288);
           box-shadow: -3px -3px 7px #ffffff73, 2px 2px 5px rgba(94, 104, 121, 0.288);
   border-radius: 10px;
-  padding: 25px;
+  padding: 20px;
 }
 
 .keyboard__row {
@@ -36,8 +43,8 @@ body {
 }
 
 .keyboard__row input {
-  height: 50px;
-  min-width: 50px;
+  height: 45px;
+  min-width: 45px;
   padding: 10px;
   outline: none;
   border: none;
@@ -63,11 +70,11 @@ body {
 }
 
 .correct {
-  color: green;
+  color: #5cb85c;
 }
 
 .incorrect {
-  color: red;
+  color: #d9534f;
   text-decoration: underline;
 }
 

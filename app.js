@@ -52,7 +52,8 @@ async function renderText(paragraph) {
     paragraphDOM.appendChild(charSpan);
   });
 }
-renderText(userLevel);
+// renderText(userLevel);
+renderText(3);
 
 function checkUserString() {
   const paragraphQuote = paragraphDOM.textContent.toUpperCase().split("");
