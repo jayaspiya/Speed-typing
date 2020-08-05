@@ -7,7 +7,7 @@
 
 ## Things to add
 
-- [] Random text render
+- [ ] Random text render
 - [x] Font CSS
 - [x] Keyboard Smaller
-- [] Timer
+- [ ] Timer
