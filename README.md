@@ -1,4 +1,4 @@
-# Neumorphism Keyboard
+# Speed typing
 
 ## Inspiration
 
@@ -11,3 +11,4 @@
 - [x] Font CSS
 - [x] Keyboard Smaller
 - [ ] Timer
+- [ ] Score board
