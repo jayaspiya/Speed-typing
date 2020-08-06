@@ -7,8 +7,11 @@
 
 ## Things to add
 
-- [ ] Random text render
+- [x] Random Statement Picking
 - [x] Font CSS
 - [x] Keyboard Smaller
 - [ ] Timer
 - [ ] Score board
+- [ ] Error Message
+- [ ] Complete Message
+- [ ] Progress Bar
