@@ -10,6 +10,25 @@ body {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
+.progress-bar {
+  position: absolute;
+  top: 0;
+  background: #eb3349;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(linear, left top, right top, from(#f45c43), to(#eb3349));
+  background: linear-gradient(to right, #f45c43, #eb3349);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  min-height: 7px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  width: 100%;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+}
+
 .wrapper {
   position: absolute;
   top: 50%;
@@ -80,5 +99,39 @@ body {
 
 .userPositionIndicate {
   text-decoration: underline;
+}
+
+.game-board {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: auto;
+  width: 50%;
+  color: #808080;
+  -webkit-box-shadow: inset -3px -3px 7px #ffffff73, inset 2px 2px 5px rgba(94, 104, 121, 0.288);
+          box-shadow: inset -3px -3px 7px #ffffff73, inset 2px 2px 5px rgba(94, 104, 121, 0.288);
+  border-radius: 10px;
+  padding: 12px 0;
+}
+
+.game-board * {
+  margin: 0 10px;
+  padding: 0 20px;
+}
+
+.game-board * *:not(.label-tag) {
+  font-size: 2em;
+}
+
+.game-board .label-tag {
+  font-size: 1.5em;
+}
+
+.progress-bar,
+.game-board {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */
