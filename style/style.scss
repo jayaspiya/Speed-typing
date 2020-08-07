@@ -76,6 +76,11 @@ body {
         font-size: 19px;
         color: #3498db;
       }
+      &:hover {
+        background-color: #3498db;
+        transition: 1s ease;
+      }
+      transition: 2s ease;
     }
     input[value="space"] {
       width: 60%;
