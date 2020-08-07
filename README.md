@@ -11,7 +11,7 @@
 - [x] Font CSS
 - [x] Keyboard Smaller
 - [ ] Timer
-- [ ] Score board
-- [ ] Error Message
+- [x] Score board
+- [x] Error Message
 - [ ] Complete Message
-- [ ] Progress Bar
+- [x] Progress Bar
