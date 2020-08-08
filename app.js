@@ -7,42 +7,42 @@ const timer = document.querySelector(".timer");
 let timerStarted = false;
 let timerFunction;
 
-// const preparedStatement = [
-//   "Pack my box with five dozen liquor jugs.",
-//   "Amazingly few discotheques provide jukeboxes.",
-// "JFK got my VHS, PC, and XLR web quiz.",
-// "No kidding Lorenzo called off his trip to Mexico City just because they told him the conquistadors were extinct.",
-// "Quick fox jumps nightly above wizard.",
-// "Jim quickly realized that the beautiful towns are expensive.",
-// "Two driven jocks help fax my big quiz.",
-// "My girl wove six dozen plaid jackets before she quit.",
-// "Grumpy wizards make a toxic brew for the jovial queen.",
-// "The five boxing wizards jump quickly.",
-// "Woven silk pyjamas exchanged for blue quartz.",
-// "A quivering Texas zombie fought republic linked jewelry.",
-// "Fickle jinx bog dwarves spy math quiz.",
-// "The quick brown fox jumps over the lazy dog.",
-// "We promptly judged antique ivory buckles for the next prize.",
-// "Back in June we delivered oxygen equipment of the same size.",
-// "The wizard quickly jinxed the gnomes before they vapourized.",
-// "Public junk dwarves hug my quartz fox.",
-// "When zombies arrive, quickly fax judge Pat.",
-// "The quick onyx goblins jumps over the lazy dwarf.",
-// "All questions asked by watched experts amaze the judge.",
-// "Pack my box with five dozen liquor jugs.",
-// "Five quacking zephyrs jolts my wax bed.",
-// "Foxy diva Jennifer Lopez was not baking my quiche.",
-// ];
-
 const preparedStatement = [
-  "cat",
-  "dog",
-  "duck",
-  "frog",
-  "Bear",
-  "fox",
-  "Rabbit",
+  "Pack my box with five dozen liquor jugs.",
+  "Amazingly few discotheques provide jukeboxes.",
+  "JFK got my VHS, PC, and XLR web quiz.",
+  "No kidding Lorenzo called off his trip to Mexico City just because they told him the conquistadors were extinct.",
+  "Quick fox jumps nightly above wizard.",
+  "Jim quickly realized that the beautiful towns are expensive.",
+  "Two driven jocks help fax my big quiz.",
+  "My girl wove six dozen plaid jackets before she quit.",
+  "Grumpy wizards make a toxic brew for the jovial queen.",
+  "The five boxing wizards jump quickly.",
+  "Woven silk pyjamas exchanged for blue quartz.",
+  "A quivering Texas zombie fought republic linked jewelry.",
+  "Fickle jinx bog dwarves spy math quiz.",
+  "The quick brown fox jumps over the lazy dog.",
+  "We promptly judged antique ivory buckles for the next prize.",
+  "Back in June we delivered oxygen equipment of the same size.",
+  "The wizard quickly jinxed the gnomes before they vapourized.",
+  "Public junk dwarves hug my quartz fox.",
+  "When zombies arrive, quickly fax judge Pat.",
+  "The quick onyx goblins jumps over the lazy dwarf.",
+  "All questions asked by watched experts amaze the judge.",
+  "Pack my box with five dozen liquor jugs.",
+  "Five quacking zephyrs jolts my wax bed.",
+  "Foxy diva Jennifer Lopez was not baking my quiche.",
 ];
+
+// const preparedStatement = [
+//   "cat",
+//   "dog",
+//   "duck",
+//   "frog",
+//   "Bear",
+//   "fox",
+//   "Rabbit",
+// ];
 let completedStatement = [];
 let userStringInput = "";
 keys.forEach((key) => {
@@ -168,6 +168,25 @@ function renderTimer() {
   }, 1000);
 
   function getTimerTime() {
-    return Math.floor((new Date() - startTimer) / 1000);
+    let time = Math.floor((new Date() - startTimer) / 1000);
+    // let time = 61;
+    if (time > 60) {
+      timeSecond = time % 60;
+      timeSecond = makeTwoDigit(timeSecond);
+      timeMinute = (time - timeSecond) / 60;
+      timeMinute = makeTwoDigit(timeMinute);
+
+      time = `${timeMinute}:${timeSecond}`;
+    } else {
+      time = makeTwoDigit(time);
+      time = `00:${time}`;
+    }
+    return time;
+  }
+  function makeTwoDigit(num) {
+    if (num < 10) {
+      num = `0${num}`;
+    }
+    return num;
   }
 }

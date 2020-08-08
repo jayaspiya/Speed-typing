@@ -40,7 +40,8 @@ body {
 
 .paragraph {
   font-size: 18px;
-  margin: 10px 50px;
+  max-width: 700px;
+  margin: 10px 40px;
   color: #808080;
 }
 
@@ -75,8 +76,6 @@ body {
   -webkit-box-shadow: -3px -3px 7px #ffffff73, 2px 2px 5px rgba(94, 104, 121, 0.288);
           box-shadow: -3px -3px 7px #ffffff73, 2px 2px 5px rgba(94, 104, 121, 0.288);
   background-color: #dde1e7;
-  -webkit-transition: 2s ease;
-  transition: 2s ease;
 }
 
 .keyboard__row input:focus {
@@ -84,12 +83,6 @@ body {
           box-shadow: inset -3px -3px 7px #ffffff73, inset 2px 2px 5px rgba(94, 104, 121, 0.288);
   font-size: 19px;
   color: #3498db;
-}
-
-.keyboard__row input:hover {
-  background-color: #3498db;
-  -webkit-transition: 1s ease;
-  transition: 1s ease;
 }
 
 .keyboard__row input[value="space"] {

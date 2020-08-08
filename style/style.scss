@@ -41,17 +41,20 @@ body {
 
 .wrapper {
   display: grid;
+
   place-content: center;
   height: 100vh;
   text-align: center;
 }
 .paragraph {
   font-size: 18px;
-  margin: 10px 50px;
+  max-width: 700px;
+  margin: 10px 40px;
   color: #808080;
 }
 .keyboard {
   @include box-shadow();
+
   border-radius: 10px;
   padding: 20px;
   &__row {
@@ -76,11 +79,6 @@ body {
         font-size: 19px;
         color: #3498db;
       }
-      &:hover {
-        background-color: #3498db;
-        transition: 1s ease;
-      }
-      transition: 2s ease;
     }
     input[value="space"] {
       width: 60%;
