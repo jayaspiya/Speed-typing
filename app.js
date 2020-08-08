@@ -172,8 +172,8 @@ function renderTimer() {
 
   function getTimerTime() {
     let time = Math.floor((new Date() - startTimer) / 1000);
-    // let time = 61;
-    if (time > 60) {
+
+    if (time > 59) {
       timeSecond = time % 60;
       timeSecond = makeTwoDigit(timeSecond);
       timeMinute = (time - timeSecond) / 60;
