@@ -38,7 +38,25 @@ body {
   transform: translateX(-100%);
   transition: all 1s ease-out;
 }
+.messageHere {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  width: 350px;
+  min-height: 45px;
+  padding: 10px 0;
 
+  color: #969696;
+  opacity: 1;
+  transition: all 0.5s ease-out;
+  text-align: center;
+  @include box-shadow();
+}
+.hide {
+  opacity: 0;
+}
 .wrapper {
   display: grid;
 

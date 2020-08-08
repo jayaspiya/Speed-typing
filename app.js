@@ -4,10 +4,11 @@ const wrapper = document.querySelector(".wrapper");
 const score = document.querySelector("#score");
 const progressBar = document.querySelector("#progressBar");
 const timer = document.querySelector(".timer");
+const messageHere = document.querySelector(".messageHere");
 let timerStarted = false;
 let timerFunction;
 
-const preparedStatement = [
+const allStatement = [
   "Pack my box with five dozen liquor jugs.",
   "Amazingly few discotheques provide jukeboxes.",
   "JFK got my VHS, PC, and XLR web quiz.",
@@ -33,24 +34,22 @@ const preparedStatement = [
   "Five quacking zephyrs jolts my wax bed.",
   "Foxy diva Jennifer Lopez was not baking my quiche.",
 ];
+let preparedStatement = [];
+getStatements();
+function getStatements() {
+  for (let i = 0; i < 5; i++) {
+    preparedStatement.push(allStatement[randNum(allStatement.length)]);
+  }
+}
 
-// const preparedStatement = [
-//   "cat",
-//   "dog",
-//   "duck",
-//   "frog",
-//   "Bear",
-//   "fox",
-//   "Rabbit",
-// ];
 let completedStatement = [];
 let userStringInput = "";
 keys.forEach((key) => {
   key.id = key.value.toUpperCase();
 });
 
-function randNum() {
-  return Math.floor(Math.random() * preparedStatement.length);
+function randNum(max = preparedStatement.length) {
+  return Math.floor(Math.random() * max);
 }
 
 function renderText() {
@@ -102,7 +101,11 @@ function knowUserPosition() {
       } else {
         updateResult(0);
         clearInterval(timerFunction);
-        console.log("You win");
+        messageHere.classList.remove("hide");
+        messageHere.innerHTML = `<h3>
+        Congratulation
+      </h3>
+      Completed in ${timer.textContent}`;
       }
     } else {
       showError();

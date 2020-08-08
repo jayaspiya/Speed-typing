@@ -30,6 +30,29 @@ body {
   transition: all 1s ease-out;
 }
 
+.messageHere {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 10px;
+  width: 350px;
+  min-height: 45px;
+  padding: 10px 0;
+  color: #969696;
+  opacity: 1;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+  text-align: center;
+  -webkit-box-shadow: -3px -3px 7px #ffffff73, 2px 2px 5px rgba(94, 104, 121, 0.288);
+          box-shadow: -3px -3px 7px #ffffff73, 2px 2px 5px rgba(94, 104, 121, 0.288);
+}
+
+.hide {
+  opacity: 0;
+}
+
 .wrapper {
   display: -ms-grid;
   display: grid;
