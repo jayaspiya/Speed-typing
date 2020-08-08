@@ -10,8 +10,8 @@
 - [x] Random Statement Picking
 - [x] Font CSS
 - [x] Keyboard Smaller
-- [ ] Timer
+- [X] Timer
 - [x] Score board
 - [x] Error Message
-- [ ] Complete Message
+- [X] Complete Message
 - [x] Progress Bar
