@@ -37,8 +37,12 @@ const allStatement = [
 let preparedStatement = [];
 getStatements();
 function getStatements() {
-  for (let i = 0; i < 5; i++) {
-    preparedStatement.push(allStatement[randNum(allStatement.length)]);
+  const statamentLimit = 5;
+  while (preparedStatement.length < statamentLimit) {
+    const randomStatement = allStatement[randNum(allStatement.length)];
+    if (preparedStatement.indexOf(randomStatement)) {
+      preparedStatement.push(randomStatement);
+    }
   }
 }
 
@@ -131,20 +135,19 @@ function showError() {
 document.body.addEventListener("keydown", (event) => {
   const keyPressValue = event.which || event.keyCode;
   const keyPress = String.fromCharCode(keyPressValue);
-  // console.log(keyPressValue);
   if (keyPressValue == 8) {
     userStringInput = userStringInput.slice(0, -1);
   }
   if (userStringInput.length < paragraphDOM.textContent.length) {
+    if (keyPressValue == 27) {
+      //Developer Tool Check userString with Esc
+      console.log(userStringInput);
+    }
     if (keyPressValue > 64 && keyPressValue < 91) {
       document.getElementById(CSS.escape(keyPress)).focus();
       userStringInput += keyPress;
     }
 
-    if (keyPressValue == 27) {
-      //Developer Tool
-      console.log(userStringInput);
-    }
     if (keyPressValue == 190) {
       userStringInput += ".";
     }
