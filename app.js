@@ -97,7 +97,8 @@ function knowUserPosition() {
   const userPosition = userStringInput.length;
   try {
     paragraphSpan[userPosition].classList.add("userPositionIndicate");
-  } catch {
+  } catch (e) {
+    console.log(e);
     if (userStringInput == paragraphDOM.textContent.toUpperCase()) {
       if (completedStatement.length < preparedStatement.length) {
         userStringInput = "";
